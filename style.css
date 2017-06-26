@@ -1,0 +1,26 @@
+html {
+  background-color: #f8eee7;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  max-width: 800px;
+}
+
+.example {
+  background-color: #f4decb;
+  box-sizing: border-box;
+  padding: 2em;
+  width: 100%;
+  margin: 1em 0;
+}
