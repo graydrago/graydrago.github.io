@@ -30,3 +30,22 @@ Write about "Edge Split" modifier and how to use it with holes from "Boolean" mo
 # Curves
 
 Edit Mode -> `Ctrl + T` - You can rotate (twist) a connected modelby rotating a vertex of a curve.
+
+# Clear rotation/scale/location
+
+Alt + r/s/g
+
+# Edge slide
+
+`g g`
+
+# To sphere (vertices)
+
+Ctrl + Shift
+
+# Checklist after modeling
+
+* Select all in Edit mode (`a`)
+* Remove doubles (`Right click -> Merge vertices -> By distance` or `m -> By distance`)
+* Check normals (`Alt + n -> Recalculate outside` or `Shift + n`)
+* Apply scale;
