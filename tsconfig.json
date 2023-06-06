@@ -1,0 +1,51 @@
+{
+  "compilerOptions": {
+    "incremental": true,
+
+    "target": "ESNext",
+    "lib": ["DOM", "ESNext"],
+    "jsx": "react-jsx",
+
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+
+    "allowJs": true,
+    "checkJs": true,
+    "maxNodeModuleJsDepth": 1,
+
+    "noEmit": true,
+    "downlevelIteration": false,
+    "preserveConstEnums": true,
+
+    "isolatedModules": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "exactOptionalPropertyTypes": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedIndexedAccess": true,
+    "noImplicitOverride": true,
+    "noPropertyAccessFromIndexSignature": true,
+
+    "skipDefaultLibCheck": true,
+    "skipLibCheck": true,
+
+    "paths": {
+      "utils/*": [ "./src/utils/*" ],
+      "utils": [ "./src/utils/index.ts" ],
+      "dto/*": [ "./src/dto/*" ],
+      "dto": [ "./src/dto/index.ts" ]
+    },
+
+    "plugins": [
+      {
+        "name": "typescript-plugin-css-modules"
+      }
+    ]
+  }
+}

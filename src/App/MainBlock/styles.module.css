@@ -1,0 +1,15 @@
+.root {
+  padding: 2rem;
+}
+
+.root + .root {
+  margin-top: 2rem;
+}
+
+.main_state {
+  background-color: #f4decb;
+}
+
+.error_state {
+  background-color: #ffcccc;
+}
