@@ -2,12 +2,19 @@ import { resolve } from 'path';
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
+import { metaListPlugin } from './configs/utils';
+
+const PUBLIC_DIR = './public';
+
 function root(...args: string[]) {
   return resolve(__dirname, ...args);
 }
 
 export default defineConfig({
-  plugins: [react()],
+  plugins: [
+    react(),
+    metaListPlugin({ publicDir: PUBLIC_DIR }),
+  ],
   assetsInclude: ['**/*.glb'],
   publicDir: root('public'),
   build: {
@@ -15,7 +22,7 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      dto: root('src/dto'),
+      types: root('src/types'),
       utils: root('src/utils'),
     },
   },

@@ -1,8 +1,7 @@
 import useSWR from 'swr';
-import { dirname, fetcher } from 'utils';
+import { dirname, getMeta } from 'utils';
 
 import css from './styles.module.css';
-import { Meta } from 'dto';
 
 interface ExampleProps {
   metaUrl: string;
@@ -10,7 +9,7 @@ interface ExampleProps {
 }
 
 export function Example(props: ExampleProps) {
-  const { data } = useSWR(props.metaUrl, fetcher<Meta>, { suspense: true });
+  const { data } = useSWR(props.metaUrl, getMeta, { suspense: true });
   const Header = props.headerComponent || 'h1';
   const urlRoot = dirname(props.metaUrl);
   const onlineExampleUrl = `${urlRoot}/dist/index.html`;

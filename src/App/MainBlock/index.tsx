@@ -4,20 +4,25 @@ import cn from 'classnames';
 import css from './styles.module.css';
 
 interface MainBlockProps {
+  children: ReactNode;
   state?: 'main' | 'error';
-  children?: ReactNode;
+  component?: 'article' | 'section' | 'div';
 }
 
-export function MainBlock(props: MainBlockProps) {
-  const state = props.state || 'main';
+export function MainBlock({
+  component = 'article',
+  state = 'main',
+  children,
+}: MainBlockProps) {
+  const Component = component;
   const rootClassName = cn(
     css.root,
     css[`${state}_state`],
   );
 
   return (
-    <div className={rootClassName}>
-      {props.children}
-    </div >
+    <Component className={rootClassName}>
+      {children}
+    </Component>
   );
 }
