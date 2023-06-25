@@ -1,5 +1,6 @@
 {
   "title": "Blast",
   "description": "For this example I've used Pixi.js.",
-  "sourceCode": "https://github.com/qbki/blast"
+  "sourceCode": "https://github.com/qbki/blast",
+  "onlineExample": "https://qbki.github.io/blast/"
 }

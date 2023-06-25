@@ -1,5 +1,6 @@
 {
   "title": "Minesweeper",
   "description": "For this example I've used Pixi.js",
-  "sourceCode": "https://github.com/qbki/minesweeper"
+  "sourceCode": "https://github.com/qbki/minesweeper",
+  "onlineExample": "https://qbki.github.io/minesweeper/"
 }

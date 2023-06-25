@@ -3,9 +3,8 @@ import { App } from './App';
 
 import './styles.css';
 
-const ROOT_ID = 'app';
+const ROOT_ID = 'application';
 
-document.body.innerHTML = `<div id="${ROOT_ID}"></div>`;
 const root = document.getElementById(ROOT_ID);
 
 if (!root) {
