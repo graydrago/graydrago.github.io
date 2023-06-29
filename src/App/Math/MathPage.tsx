@@ -11,6 +11,7 @@ import { ArrowMarker } from './ArrowMarker';
 import { GridLines } from './GridLines';
 import { Point } from './Point';
 import { Polygon } from './Polygon';
+import {Axis} from './Axis';
 
 const VIEW_BOUNDS: BBox = {
   x: -6,
@@ -32,8 +33,8 @@ export function MathPage() {
       <MainBlock>
         <GridContext.Provider value={context}>
           <CoordinateGrid bbox={VIEW_BOUNDS} defs={<ArrowMarker />}>
-            <GridLines bbox={VIEW_BOUNDS} step={1} type="grid" />
-            <GridLines bbox={VIEW_BOUNDS} step={6} type="axis" />
+            <GridLines bbox={VIEW_BOUNDS} step={1} />
+            <Axis center={new Vec2(0, 0)} size={VIEW_BOUNDS.width}/>
             <Point center={new Vec2(-3, 3)} />
             <Point center={new Vec2(4, 4)} />
             <Arrow start={Vec2.ZERO} end={new Vec2(4, 4)} />

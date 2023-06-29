@@ -1,5 +1,4 @@
 import { ReactNode } from 'react';
-import cn from 'classnames';
 
 import { BBox } from 'types';
 
@@ -7,7 +6,6 @@ import css from './styles.module.css';
 
 interface GridLinesProps {
   bbox: BBox;
-  type: 'axis' | 'grid';
   step: number;
 }
 
@@ -21,18 +19,13 @@ function loop(min: number, max: number, step: number, fn: (v: number) => ReactNo
   return nodes;
 }
 
-export function GridLines({ bbox, step, type }: GridLinesProps) {
-  const lineClass = cn(
-    css.line,
-    css[`type_${type}`],
-  );
-
+export function GridLines({ bbox, step }: GridLinesProps) {
   return (
     <>
       {loop(bbox.y, bbox.y + bbox.height, step, (y) => (
         <line
           key={y}
-          className={lineClass}
+          className={css.line}
           x1={bbox.x}
           y1={y}
           x2={bbox.x + bbox.width}
@@ -42,7 +35,7 @@ export function GridLines({ bbox, step, type }: GridLinesProps) {
       {loop(bbox.x, bbox.x + bbox.width, step, (x) => (
         <line
           key={x}
-          className={lineClass}
+          className={css.line}
           x1={x}
           y1={bbox.y}
           x2={x}
