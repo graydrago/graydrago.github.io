@@ -36,6 +36,8 @@
     "skipLibCheck": true,
 
     "paths": {
+      "components/*": [ "./src/components/*" ],
+      "components": [ "./src/components/index.ts" ],
       "utils/*": [ "./src/utils/*" ],
       "utils": [ "./src/utils/index.ts" ],
       "types/*": [ "./src/types/*" ],

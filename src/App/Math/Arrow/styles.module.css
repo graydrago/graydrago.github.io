@@ -1,0 +1,8 @@
+@value colors: "../consts.module.css";
+@value lineColor, lineWidth from colors;
+
+.root {
+  stroke: lineColor;
+  stroke-width: lineWidth;
+  stroke-linecap: round;
+}

@@ -1,0 +1,6 @@
+@value colors: "../consts.module.css";
+@value lineColor from colors;
+
+.root {
+  fill: lineColor;
+}

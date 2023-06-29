@@ -4,3 +4,10 @@ export interface Meta {
   sourceCode: string;
   onlineExample: string;
 }
+
+export interface BBox {
+  x: number;
+  y: number;
+  width: number;
+  height: number;
+}

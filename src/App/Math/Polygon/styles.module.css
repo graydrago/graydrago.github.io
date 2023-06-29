@@ -1,0 +1,9 @@
+@value colors: "../consts.module.css";
+@value lineColor, lineWidth from colors;
+
+.root {
+  stroke: lineColor;
+  stroke-width: lineWidth;
+  stroke-linejoin: round;
+  fill: none;
+}

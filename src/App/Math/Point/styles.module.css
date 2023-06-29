@@ -1,0 +1,8 @@
+@value colors: "../consts.module.css";
+@value markerColor, lineWidth from colors;
+
+.root {
+  stroke: none;
+  fill: markerColor;
+  r: calc(lineWidth * 2);
+}

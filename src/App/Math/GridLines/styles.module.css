@@ -1,0 +1,12 @@
+.line {
+  stroke: #ddddff;
+  stroke-linecap: round;
+}
+
+.type_axis {
+  stroke-width: 0.1;
+}
+
+.type_grid {
+  stroke-width: 0.02;
+}

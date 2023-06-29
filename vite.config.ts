@@ -22,6 +22,7 @@ export default defineConfig({
   },
   resolve: {
     alias: {
+      components: root('src/components'),
       types: root('src/types'),
       utils: root('src/utils'),
     },
