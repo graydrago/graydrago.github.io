@@ -11,7 +11,7 @@ import { ArrowMarker } from './ArrowMarker';
 import { GridLines } from './GridLines';
 import { Point } from './Point';
 import { Polygon } from './Polygon';
-import {Axis} from './Axis';
+import { Axis } from './Axis';
 
 const VIEW_BOUNDS: BBox = {
   x: -6,

@@ -5,7 +5,7 @@ export function metaListPlugin({ publicDir }: { publicDir: string }) {
   const name = 'virtual:meta-list';
   const examplesDir = './examples';
   const files = readdirSync(resolve(publicDir, examplesDir))
-    .map((dir) => `${examplesDir}/${dir}/meta.json`)
+    .map((dir) => `${examplesDir}/${dir}/meta.json`);
   const json = JSON.stringify(files);
   const loadPayload = {
     code: `export const META = ${json};`,
@@ -22,4 +22,3 @@ export function metaListPlugin({ publicDir }: { publicDir: string }) {
     },
   };
 }
-

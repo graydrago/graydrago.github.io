@@ -14,7 +14,7 @@ export interface ArrowProps {
 
 export function Arrow({ start, end }: ArrowProps) {
   const context = useContext(GridContext);
-  const endOffset = end.sub(end.norm().mulScalar(OFFSET))
+  const endOffset = end.sub(end.norm().mulScalar(OFFSET));
 
   return (
     <line

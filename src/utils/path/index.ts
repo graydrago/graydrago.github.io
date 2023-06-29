@@ -1,5 +1,5 @@
 export function dirname(path: string) {
-  const lastIndex = path.lastIndexOf('/')
+  const lastIndex = path.lastIndexOf('/');
   if (lastIndex < 0) {
     return '/';
   }

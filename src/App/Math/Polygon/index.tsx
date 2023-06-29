@@ -8,9 +8,9 @@ export interface PolygonProps {
 }
 
 export function Polygon({ points }: PolygonProps) {
-  const stringifiedPoints = useMemo(() => points.map(
-    ({ x, y }) => `${x} ${y}`).join(','),
-    [points]
+  const stringifiedPoints = useMemo(
+    () => points.map(({ x, y }) => `${x} ${y}`).join(','),
+    [points],
   );
 
   return (

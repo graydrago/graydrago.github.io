@@ -1,0 +1,28 @@
+{
+  "extends": [
+    "eslint:recommended",
+    "plugin:editorconfig/all",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "plugins": [
+    "@typescript-eslint",
+    "editorconfig"
+  ],
+  "rules": {
+    "@typescript-eslint/no-unused-vars": ["error", { "argsIgnorePattern": "^_" }],
+    "@typescript-eslint/object-curly-spacing": ["error", "always"],
+    "array-bracket-spacing": ["error", "never"],
+    "keyword-spacing": ["error"],
+    "max-len": ["error", 120],
+    "no-console": "warn",
+    "object-curly-spacing": "off",
+    "quotes": ["error", "single"],
+    "react/react-in-jsx-scope": "off",
+    "semi": ["error", "always"]
+  },
+  "ignorePatterns": ["node_modules", "dist"],
+  "root": true
+}

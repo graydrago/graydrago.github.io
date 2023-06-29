@@ -6,5 +6,5 @@ export function NotFoundError() {
       <h1>Not Found</h1>
       <p>(￢_￢;)</p>
     </MainBlock>
-  )
+  );
 }
