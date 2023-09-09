@@ -1,6 +1,7 @@
 import { Suspense } from 'react';
 
-import { MainBlock, MainListBlock } from 'components';
+import { MainBlock } from 'components/MainBlock';
+import { MainListBlock } from 'components/MainListBlock';
 import { META } from 'virtual:meta-list';
 
 import { Example } from '../Example';

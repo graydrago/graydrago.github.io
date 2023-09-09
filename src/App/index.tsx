@@ -1,22 +1,20 @@
-import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import { RouterProvider, createHashRouter } from 'react-router-dom';
 
-import {
-  ErrorBoundary,
-  GenericError,
-  NotFoundError,
-} from 'components';
+import { ErrorBoundary } from 'components/ErrorBoundary';
+import { GenericError } from 'components/GenericError';
+import { NotFoundError } from 'components/NotFoundError';
 
 import { ExamplesPage } from './Examples';
 import { MathPage } from './Math';
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: '/',
     errorElement: <GenericError />,
     element: <ExamplesPage />,
   },
   {
-    path: '/math',
+    path: '/math/*',
     errorElement: <GenericError />,
     element: <MathPage />,
   },

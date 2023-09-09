@@ -25,4 +25,8 @@ export class Vec2 {
   }
 
   static ZERO = Object.freeze(new Vec2(0, 0));
+
+  toString(): string {
+    return `(${this.x},${this.y})`;
+  }
 }

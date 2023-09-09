@@ -1,46 +1,29 @@
-import { useId } from 'react';
-import { Vec2 } from 'utils';
+import { createElement } from 'react';
+import { Route, Routes } from 'react-router-dom';
 
-import { MainBlock, MainListBlock } from 'components';
-import { BBox } from 'types';
+import { MainBlock, } from 'components/MainBlock';
+import { MainListBlock } from 'components/MainListBlock';
 
-import { CoordinateGrid } from './CoordinateGrid';
-import { Arrow } from './Arrow';
-import { GridContext } from './GridContext';
-import { ArrowMarker } from './ArrowMarker';
-import { GridLines } from './GridLines';
-import { Point } from './Point';
-import { Polygon } from './Polygon';
-import { Axis } from './Axis';
-
-const VIEW_BOUNDS: BBox = {
-  x: -6,
-  y: -6,
-  width: 12,
-  height: 12,
-};
+import { Links } from './Links';
+import { PAGES } from './pages';
 
 export function MathPage() {
-  const context = {
-    arrowMarkerId: useId(),
-  };
-
   return (
     <MainListBlock>
       <MainBlock>
         <h1>Math</h1>
       </MainBlock>
       <MainBlock>
-        <GridContext.Provider value={context}>
-          <CoordinateGrid bbox={VIEW_BOUNDS} defs={<ArrowMarker />}>
-            <GridLines bbox={VIEW_BOUNDS} step={1} />
-            <Axis center={new Vec2(0, 0)} size={VIEW_BOUNDS.width}/>
-            <Point center={new Vec2(-3, 3)} />
-            <Point center={new Vec2(4, 4)} />
-            <Arrow start={Vec2.ZERO} end={new Vec2(4, 4)} />
-            <Polygon points={[new Vec2(1, -1), new Vec2(4, -1), new Vec2(4, -4), new Vec2(1, -4)]} />
-          </CoordinateGrid>
-        </GridContext.Provider>
+        <Routes>
+          {PAGES.map((page) => (
+            <Route
+              key={page.name}
+              path={page.component.name}
+              element={createElement(page.component)}
+            />
+          ))}
+          <Route path="*" element={<Links />} />
+        </Routes>
       </MainBlock>
     </MainListBlock>
   );
