@@ -3,6 +3,7 @@ export interface Meta {
   description: string;
   sourceCode: string;
   onlineExample: string;
+  ordering: number;
 }
 
 export interface BBox {

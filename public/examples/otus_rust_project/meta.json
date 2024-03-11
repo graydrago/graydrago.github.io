@@ -2,5 +2,6 @@
   "title": "Top-Down Shooter (Rust)",
   "description": "Prototype of a Top-Down Shooter game written in the Rust language",
   "sourceCode": "https://github.com/qbki/otus-rust-project",
-  "onlineExample": "https://qbki.github.io/otus-rust-project/"
+  "onlineExample": "https://qbki.github.io/otus-rust-project/",
+  "ordering": "2"
 }
